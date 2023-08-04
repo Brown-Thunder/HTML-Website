@@ -3,6 +3,6 @@
   "rewrites": [
     { "source": "/", "destination": ".Index.html" },
     { "source": "/:path*", "destination": ".Index.html" },
-    { "source": "/(.*)", "destination": ".Index.html"}
+    { "source": "https://portfolio-pied-zeta-48.vercel.app/", "destination": "https://portfolio-pied-zeta-48.vercel.app/Index.html"}
   ]
 }
