@@ -1,7 +1,6 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/Index2.html" },
-      { "source": "/:path*", "destination": "/Index2.html" }
-    ]
-  }
-  
+  "rewrites": [
+    { "source": "/", "destination": "/Website/Index 2.html" },
+    { "source": "/:path*", "destination": "/Website/Index 2.html" }
+  ]
+}
