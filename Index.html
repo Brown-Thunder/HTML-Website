@@ -104,10 +104,9 @@
                     Please click the below tabs to see more.
                 </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>                                            </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><Span>Agile Methodologies</Span><br>Ensuring organisations follow the principles of the Agile Methodology.</li>
@@ -349,15 +348,15 @@ var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
 // This function will allow us to hide unwanted tabs and the line underneath too 
-function opentab(tabname){
-for(tablink of tablinks){
-    tablink.classList.remove("active-link");
-}
-for(tabcontent of tabcontents){
-    tabcontent.classList.remove("active-tab");
-}
-event.currentTarget.classList.add("active-link");
-document.getElementById(tabname).classList.add("active-tab");
+function opentab(event, tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
 }
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
