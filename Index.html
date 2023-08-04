@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amit's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- THIS IS THE HOMEPAGE SCREEN -->
+<!-- Transform header into a grid so that I can move the nav bar up. -->
+
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href="#Insert Link to homepage here#"><img src="images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div id="homepage">
+    <div class="homepage-text">
+        <p>Product Owner</p>
+        <h1>Hi, I'm <span>Amit Dhunna</span> <br>from Birmingham.<br> I am a Product Owner.</h1>
+    </div>
+</div>
+
+<!-- THIS IS THE ABOUT PAGE -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/amit pic.png" class="Amit-Pic">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="about-body">I am a driven individual who is always striving to improve his skills and knowledge base. My previous work experience has moulded me into a professional and hard working employee who thrives in high pressure and fast moving environments allowing me to fine-tune my time management skills.
+                    <br><br>
+                    As a result of the nature of my current job, I have refined my skills as a product owner and can effectively manage stakeholders, plan sprints, report on work done by the team and perform many other responsibilities that are normally attributed to product owners.
+                    <br><br>
+                    I also have certified accreditaions for the role of Product Owner and Scrum Master and therefore I am able to demonstrate the most up to date practices that are taught as part of the Scrum framework.
+                </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><Span>Agile Methodologies</Span><br>Ensuring organisations follow the principles of the Agile Methodology.</li>
+                            <li><Span>Product Ownership</Span><br>Taking complete ownership of the product and driving the product vision and roadmap.</li>
+                            <li><Span>Graphic Design</Span><br>Self-taught graphic designer specialising in vector art and video animation.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><Span>2023 - Current</Span><br>Product Owner at YourParkingSpace</li>
+                            <li><Span>2022 - 2023</Span><br>Product Owner at Dye & Durham</li>
+                            <li><Span>2021 - 2022</Span><br>Product Owner at Admiral Money</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><Span>2017 - 2020</Span><br>BSc Business Management at Cardiff University</li>
+                            <li><Span>2014 - 2016</Span><br>A-Levels at King Edward VI Camp Hill School for Boys</li>
+                            <li><Span>2009 - 2016</Span><br>GCSEs at King Edward VI Camp Hill School for Boys</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    // This function will allow us to hide unwanted tabs and the line underneath too 
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    </script>
+
+    </body>
+    </html>

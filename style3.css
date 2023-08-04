@@ -1,0 +1,788 @@
+/* Overarching stylesheet for webpage */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* This sets the background colour to be black and the text colour to be white */
+body{
+    color: white;
+    background-image: url(images/red-tech-world-background.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+/* THIS IS THE LOGO AND NAV BAR */
+
+
+
+
+
+
+
+
+/* This section controls the parameters of the overall header section*/
+#header{
+    display: flex;
+    padding-top: 2%;
+    padding-left: 3%;
+    color: white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 110PX;
+    transition: 0.2s;
+    background-color: black;
+    line-height: 0%;
+    z-index:999;
+}
+
+/* This makes the nav bar appear in a row (next to the logo) */
+.home-row{
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* this is the container that has the nav bar in */
+.container{ 
+    padding: 30px 3%;
+}
+
+
+/* The first column will have a column which takes up 10% of the screen and a logo within that takes up that full width. */
+.logo-col-1{
+    flex-basis: 5%;
+}
+.logo-col-1 img{
+    width: 80%;
+    margin: -10px 0px;
+}
+
+/* This makes the text take up the remaining 80% of the screen with the nav bar */
+.nav-col-2{
+    flex-basis: 90%;
+    padding: 30px 90PX;
+    text-align: right;
+}
+
+/* Displaying Nav bar in format we want it in, inline block displays horizontally */
+nav ul li{
+    display: inline;
+    list-style: none;
+    padding: 10px;
+    margin: -150px 50px;
+}
+
+.home-btn{
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin-right: -40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ff004f;
+    background: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: border 0.5s, background 0.5s color, 0.5s;
+    cursor: pointer;
+}
+.home-btn:hover{
+    border: 1px solid #ff004f;
+    background: #ff004f;
+    color: white;
+}
+/* This sets the format of the text in the nav bar */
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    font-weight: bold;
+    margin-left: -20px;
+}
+
+/* This creates a red line under each menu item that is hidden */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* This reveals the red line under the meny item when the cursor hovers over it */
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* THIS IS THE HOMEPAGE */
+
+
+
+
+
+
+
+
+
+/* This section controls the parameters of the overall homepage section including distance from previous section and text colour */
+#homepage{
+    padding: 0px 0;
+    color: white;
+    margin-top: -30px;
+    align-items: center;
+
+}
+
+/* The first column will have a column which takes up 60% of the screen */
+.amit-intro-col-1{
+    flex-basis: 60%;
+}
+
+/* This sets the font size and margin for the text  */
+.home-title{
+    font-size: 30px;
+}
+.home-body{
+    font-size: 60px;
+    margin-top: 35px;
+    /* margin-left: 30px; */
+}
+.amit-intro-col-1 h1 span{
+    color: #ff004f;
+}
+
+/* This makes the image take up the remaining 40% of the screen */
+.img-col-2{
+    flex-basis: 40%;
+    margin-top: -90px;
+    text-align: center;
+}
+.img-col-2 img{
+    width: 100%;
+    border-radius: 6000px;
+}
+
+
+
+
+
+
+
+
+
+/* THIS IS THE ABOUT PAGE */
+
+
+
+
+
+
+
+
+/* This section controls the parameters of the overall about section including distance from previous section and text colour */
+#about{
+    padding-top: 90px;
+    color: #ababab;
+    line-height: 23px;
+}
+
+/* This makes the About me title appear in a row (next to the image) */
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* The first column will have a column which takes up 35% of the screen and a picture within that takes up that full width. */
+.about-col-1{
+    flex-basis: 35.5%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 10PX;
+}
+
+/* This makes the text take up the remaining 60% of the screen */
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* This allows us to change the sub-title text formatting */
+.sub-title{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+/* This adds a 20px gap between the body and the title */
+.about-body{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* This displays the about me tabs horizontally and adjusts the font formatting. Also turns the cursor into a pointer when you hover over a link */
+.tab-titles{
+    display: flex;
+    width: fit-content;
+    margin: 20px 5px 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-left: -10px;
+    font-size: 20px;
+    /* background: #ff00517f; */
+    border-radius: 15px;
+}
+.tab-links{
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+
+/* This adds a red line underneath the active link when the cursor hovers over it. */
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+/* This creates the formatting for the contents of the about me tabs */
+.tab-contents ul li{
+    list-style: none;
+    margin: 0px 0;
+    font-size: 18px;
+}
+.tab-contents ul li span{
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+/* This section allows me to hide inactive tabs. */
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+    background-color: #ff005165;
+    width: fit-content;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    margin-left: -10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* THIS IS THE CV SECTION */
+
+
+
+
+
+
+
+/* This sets the parameters of the CV heading */
+
+#cv{
+    /* padding-top: 590px 0; */
+    color: white;
+}
+
+/* This section sets the formatting for the sections titles and adds a line either side of it to break up the sections */
+.section-title{
+    font-size: 60px;
+    font-weight: bold dotted;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    align-items: end;
+}
+.section-title:before, .section-title:after {
+    position: absolute;
+    top: 45%;
+    overflow: hidden;
+    width: 48%;
+    height: 10px;
+    content: '\a0';
+    background-color: white;
+    margin-left: 2%;
+    align-items: center;
+}
+.section-title:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+
+.cv-heading-2{
+    font-size: 40px;
+    /* font-weight: bold; */
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* This is the experience section of the CV */
+#cv{
+    padding: 50px 0;
+}
+.experience-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.sub-container{
+    background: #ff00517f;
+    border-radius: 15px;
+}
+.experience-list div i{
+    font-size: 40px;
+    margin-bottom: 10px;
+    /* margin-top: 30px; */
+}
+.experience-list div h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.experience{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    box-shadow: 10px 5px 5px black;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    transition: height 0.5s;
+}
+.layer h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.experience:hover img{
+    transform: scale(1.1);
+}
+.experience:hover .layer{
+    height: 100%;
+    place-content: center;
+}
+
+
+.qualifications{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: 0;
+    /* margin-top: 50px; */
+    place-items: center;
+    text-align: center;
+    /* margin-top: -125px; */
+}
+
+.qualifications img{
+    height: 50%;
+    width: 60%;
+    transition: transform 0.5s;
+}
+
+.qual-text h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.qualifications img:hover{
+    transform: translateY(-10px)
+}
+
+
+/* This section controls the format and look of the skills circles  */
+.wrap-circles {
+  display: grid;
+  /* min-height: 100vh; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  grid-column-gap: 30px;
+  margin-top: 5px;
+}
+.circle {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background: #FFCDB2;
+  overflow: hidden;
+}
+.circle.per-0 {
+    background-image: conic-gradient(#ff004f 90%, rgb(72, 69, 69) 0);
+    grid-column: 1;
+    grid-row: 1;
+    transition: 0.5s;
+}
+.circle.per-1 {
+    background-image: conic-gradient(#ff004f 80%, rgb(72, 69, 69) 0);
+    grid-column: 2;
+    grid-row: 1;
+    transition: 0.5s;
+}
+.circle.per-2 {
+    background-image: conic-gradient(#ff004f 88%, rgb(72, 69, 69) 0);
+    grid-column: 3;
+    grid-row: 1;
+    transition: 0.5s;
+}
+.circle.per-3 {
+    background-image: conic-gradient(#ff004f 90%, rgb(72, 69, 69) 0);
+    grid-column: 4;
+    grid-row: 1;
+    transition: 0.5s;
+}
+.circle.per-4 {
+    background-image: conic-gradient(#ff004f 60%, rgb(72, 69, 69) 0);
+    grid-column: 5;
+    grid-row: 1;
+    transition: 0.5s;
+}
+.circle.per-5 {
+    background-image: conic-gradient(#ff004f 95%, rgb(72, 69, 69) 0);
+    grid-column: 1;
+    grid-row: 2;
+    transition: 0.5s;
+}
+.circle.per-6 {
+    background-image: conic-gradient(#ff004f 85%, rgb(72, 69, 69) 0);
+    grid-column: 2;
+    grid-row: 2;
+    transition: 0.5s;
+}
+.circle.per-7 {
+    background-image: conic-gradient(#ff004f 90%, rgb(72, 69, 69) 0);
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 35px;
+    transition: 0.5s;
+}
+.circle.per-8 {
+    background-image: conic-gradient(#ff004f 95%, rgb(72, 69, 69) 0);
+    grid-column: 4;
+    grid-row: 2;
+    transition: 0.5s;
+}
+.circle.per-9 {
+    background-image: conic-gradient(#ff004f 80%, rgb(72, 69, 69) 0);
+    grid-column: 5;
+    grid-row: 2;
+    transition: 0.5s;
+}
+.circle .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: #000;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.inner{
+    width: fit-content;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 14px 50px;
+    border-radius: 10px;
+    text-decoration: none; 
+    color: #ff004f;
+    background: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: border 0.5s, background 0.5s color, 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    border: 1px solid #ff004f;
+    background: #ff004f;
+    color: white;
+}
+
+.btn-info{
+    text-align: center;
+    font-size: 14.5px;
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+.circle.per-0:hover{
+    transform: scale(1.2);
+}
+.circle.per-1:hover{
+    transform: scale(1.2);
+}
+.circle.per-2:hover{
+    transform: scale(1.2);
+}
+.circle.per-3:hover{
+    transform: scale(1.2);
+}
+.circle.per-4:hover{
+    transform: scale(1.2);
+}
+.circle.per-5:hover{
+    transform: scale(1.2);
+}
+.circle.per-6:hover{
+    transform: scale(1.2);
+}
+.circle.per-7:hover{
+    transform: scale(1.2);
+}
+.circle.per-8:hover{
+    transform: scale(1.2);
+}
+.circle.per-9:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/* THIS IS THE SERVICES SECTION*/
+
+
+
+
+
+
+
+
+
+#services{
+    /* padding: 20px 0; */
+    text-align: center;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 40px;
+    margin-top: 50px;
+    align-items: center;
+    grid-auto-rows: 1fr;
+}
+
+.services-list h1{
+    font-size: 30px;
+}
+
+.services-list p{
+    padding-top: 20px;
+}
+
+/* This creates the grey box around the items */ 
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 15px;
+    text-align: center;
+    transition: background 0.5s, transform 0.5s;
+    padding-top: 20px;
+}
+/* This makes it red */
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* THIS IS THE CONTACT SECTION  */
+
+
+
+
+
+
+
+.contact{
+    padding-top: 40px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.submit-btn{
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid white;
+    padding: 7px 20px;
+    border-radius: 10px;
+    text-decoration: none; 
+    color: #ff004f;
+    background: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.form submit-btn{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
