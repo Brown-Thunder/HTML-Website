@@ -817,13 +817,13 @@ form input, form textarea{
 /* -------------- this is the CSS code to make my website responsive ------------- */
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
     body {
         background-image: url(images/Website-Background-Mobile-Version.png);
-        height: fit-content;
         color: white;
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
+        min-height: 100vh; /* Set a minimum height to cover the viewport */
     }
 }
