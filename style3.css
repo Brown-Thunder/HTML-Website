@@ -821,5 +821,9 @@ form input, form textarea{
     body {
         background-image: url(images/Website-Background-Mobile-Version.png);
         height: fit-content;
+        color: white;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
     }
 }
