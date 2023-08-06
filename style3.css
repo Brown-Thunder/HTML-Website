@@ -33,90 +33,109 @@ body{
 
 
 /* This section controls the parameters of the overall header section*/
-#header{
+#header {
     display: flex;
-    padding-top: 2%;
-    padding-left: 3%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;
     color: white;
     position: fixed;
     top: 0px;
     width: 100%;
-    height: 110PX;
+    height: 80px;
     transition: 0.2s;
     background-color: black;
-    line-height: 0%;
-    z-index:999;
+    z-index: 999;
 }
 
+
 /* This makes the nav bar appear in a row (next to the logo) */
-.home-row{
-    display: inline-flex;
+.home-row {
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* Align items to the left and right edges */
+    align-items: center;
 }
 
 /* this is the container that has the nav bar in */
-.container{ 
-    padding: 30px 3%;
+.container-header {
+    /* padding: 0px 20px; */
+    width: 100%;
+    box-sizing: border-box;
 }
-
 
 /* The first column will have a column which takes up 10% of the screen and a logo within that takes up that full width. */
-.logo-col-1{
+.logo-col-1 {
     flex-basis: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 10px;
+    margin-left: -20px;
 }
-.logo-col-1 img{
-    width: 80%;
-    margin: -10px 0px;
+
+.logo-col-1 img {
+    height: 100%; /* Adjusted to take up full width */
+    max-height: 60px;
 }
 
 /* This makes the text take up the remaining 80% of the screen with the nav bar */
-.nav-col-2{
-    flex-basis: 90%;
-    padding: 30px 90PX;
-    text-align: right;
+.nav-col-2 {
+    flex-basis: 90%; /* Adjusted to take up remaining width */
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    width: 100%;
 }
 
 /* Displaying Nav bar in format we want it in, inline block displays horizontally */
-nav ul li{
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
     display: inline;
     list-style: none;
     padding: 10px;
-    margin: -150px 50px;
 }
 
-.home-btn{
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid white;
+.home-btn {
+    margin: 0 0px;
     padding: 10px 20px;
-    margin-right: -40px;
     border-radius: 10px;
     text-decoration: none;
     color: #ff004f;
     background: white;
     font-weight: bold;
     font-size: 20px;
-    transition: border 0.5s, background 0.5s color, 0.5s;
+    transition: border 0.5s, background 0.5s, color 0.5s;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.home-btn:hover{
+
+.home-btn:hover {
     border: 1px solid #ff004f;
     background: #ff004f;
     color: white;
 }
+
 /* This sets the format of the text in the nav bar */
-nav ul li a{
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 25px;
-    position: relative;
+    font-size: 20px;
     font-weight: bold;
-    margin-left: -20px;
+    position: relative;
 }
 
 /* This creates a red line under each menu item that is hidden */
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -128,7 +147,7 @@ nav ul li a::after{
 }
 
 /* This reveals the red line under the meny item when the cursor hovers over it */
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
 
@@ -151,41 +170,45 @@ nav ul li a:hover::after{
 
 
 /* This section controls the parameters of the overall homepage section including distance from previous section and text colour */
-#homepage{
-    padding: 0px 0;
+#homepage {
     color: white;
-    margin-top: -30px;
-    align-items: center;
-
+    text-align: center; /* Center-align content */
+    padding-top: 100px;
 }
 
 /* The first column will have a column which takes up 60% of the screen */
-.amit-intro-col-1{
-    flex-basis: 60%;
+.amit-intro-col-1 {
+    flex-basis: 50%; /* Adjusted for small screens */
+    text-align: start;
+    margin-bottom: 20px; /* Add some space between sections */
+    padding: 10px;
 }
 
 /* This sets the font size and margin for the text  */
-.home-title{
-    font-size: 30px;
+.home-title {
+    font-size: 4vw;
+    margin-bottom: 10px;
 }
-.home-body{
-    font-size: 60px;
-    margin-top: 35px;
-    /* margin-left: 30px; */
+.home-body {
+    font-size: 4.5vw;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .amit-intro-col-1 h1 span{
     color: #ff004f;
+    font-size: 5vw;
 }
 
 /* This makes the image take up the remaining 40% of the screen */
-.img-col-2{
-    flex-basis: 40%;
-    margin-top: -90px;
-    text-align: center;
+.img-col-2 {
+    flex-basis: 50%; /* Adjusted for small screens */
+    text-align: right; /* Center-align content */
+    padding-right: 20px;
 }
-.img-col-2 img{
-    width: 100%;
-    border-radius: 6000px;
+.img-col-2 img {
+    width: 80%; /* Adjusted for better display on small screens */
+    max-width: 600px; /* Limit the maximum width for larger screens */
+    border-radius: 50%;
 }
 
 
@@ -207,7 +230,7 @@ nav ul li a:hover::after{
 
 /* This section controls the parameters of the overall about section including distance from previous section and text colour */
 #about{
-    padding-top: 90px;
+    padding-top: 20px;
     color: #ababab;
     line-height: 23px;
 }
@@ -334,6 +357,7 @@ nav ul li a:hover::after{
 
 #cv{
     /* padding-top: 590px 0; */
+    padding: 20px;
     color: white;
 }
 
